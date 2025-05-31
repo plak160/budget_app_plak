@@ -46,7 +46,9 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
         with:
-          args: "-Dsonar.sources=."
+          args: "-Dsonar.c.file.suffixes=-
+      -Dsonar.cpp.file.suffixes=-
+      -Dsonar.objc.file.suffixes=-"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
