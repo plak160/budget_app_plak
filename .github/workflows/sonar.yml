@@ -46,7 +46,7 @@ jobs:
       - name: SonarCloud Scan
         uses: SonarSource/sonarqube-scan-action@v5
         with:
-          args: ""
+          args: "-Dsonar.verbose=false"
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
